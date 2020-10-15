@@ -62,11 +62,48 @@
             background-color: $color-accent;
             color: $color-light;
             font-size: 1.2rem;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.1em;
         }
     }
     &-body {
         border-color: 1px solid $color-gray;
         border-radius: 0 0 4px 4px;
     }
+}
+
+.input {
+    &-lg,
+    &-group-lg>.form-control {
+        font-size: 0.875rem;
+    }
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+    >li {
+        >a {
+            border-color: $color-gray;
+        }
+        &.active>a,
+        &.active>a:focus,
+        &.active>a:hover {
+            background-color: darken(#ffffff, 3%);
+        }
+    }
+}
+
+.thumbnail {
+    transition: background-color 0.25s;
+}
+
+.news-image {
+    width: 252px;
+}
+
+.news-thumbnail__item {
+    display: flex;
+}
+
+.news-link {
+    width: 100%;
 }

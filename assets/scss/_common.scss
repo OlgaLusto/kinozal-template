@@ -7,3 +7,14 @@ body {
     font-size: $font-size;
     font-family: $font-main;
 }
+
+a {
+    color: $color-primary;
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-accent;
+    }
+}

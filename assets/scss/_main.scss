@@ -1,8 +1,103 @@
-//потом переделать на класс
 .main {
     margin-bottom: $gap * 5.333333;
+    .user-login {
+        margin-bottom: $gap * 3;
+    }
+    .site-search {
+        margin-bottom: $gap * 4;
+    }
 }
 
-h1 {
-    margin-top: 0;
+.new-films {
+    &-title {
+        margin-top: -7px;
+        margin-bottom: 45px;
+        font-size: 3rem;
+        font-family: $font-header;
+        width: 100%;
+        font-weight: 500;
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 488px;
+            border-bottom: solid $color-accent 3px;
+            //overflow: hidden;
+            margin: 40px 0 0 15px;
+            opacity: 0.5;
+        }
+    }
+    &-item {
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+        margin-bottom: $gap;
+        &__thumbnail {
+            margin-bottom: 0;
+        }
+        &__thumbnail:hover {
+            background-color: $color-accent;
+        }
+        &__title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: auto;
+            text-align: center;
+        }
+    }
+    &-row {
+        margin-left: -$gap / 2;
+        margin-right: -$gap / 2;
+    }
+}
+
+.top-films {
+    &-title {
+        margin-top: 60px;
+        margin-bottom: 45px;
+        padding-left: 45px;
+        font-size: 2.5rem;
+        font-family: $font-header;
+        width: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            border-bottom: solid $color-accent 3px;
+            //overflow: hidden;
+            margin: 10px 0 0px -45px;
+            opacity: 0.5;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 508px;
+            border-bottom: solid $color-accent 3px;
+            //overflow: hidden;
+            margin: 34px 0 0px 15px;
+            opacity: 0.5;
+        }
+    }
+    &-item {
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+        margin-bottom: $gap;
+        &__thumbnail {
+            margin: 0;
+        }
+        &__thumbnail:hover {
+            background-color: $color-accent;
+        }
+        &__title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: auto;
+            text-align: center;
+        }
+    }
+    &-row {
+        margin-left: -$gap / 2;
+        margin-right: -$gap / 2;
+    }
 }
