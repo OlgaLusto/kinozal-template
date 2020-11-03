@@ -1,0 +1,29 @@
+.footer {
+    background-color: $color-dark;
+    padding-top: 45px;
+    a {
+        color: #777777;
+    }
+}
+
+.footer-item {
+    list-style: none;
+    h4 {
+        color: $color-light;
+    }
+    ul {
+        list-style: none;
+        text-decoration: none;
+        margin-left: -40px;
+    }
+}
+
+.footer-signater {
+    a {
+        color: $color-light;
+    }
+    width: 100%;
+    margin: 20px auto 20px auto;
+    text-align: center;
+    font-weight: bold;
+}

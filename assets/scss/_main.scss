@@ -1,15 +1,42 @@
 .main {
-    margin-bottom: $gap * 5.333333;
+    @include md-sm {
+        margin-bottom: 60px;
+    }
+    @include lg-md {
+        margin-bottom: 60px;
+    }
+    @include lg-min {
+        margin-bottom: 15px;
+    }
+    margin-bottom: 16px;
     .user-login {
         margin-bottom: $gap * 3;
     }
     .site-search {
         margin-bottom: $gap * 4;
+        @include md-sm {
+            margin-bottom: 45px;
+        }
     }
+    overflow-x: hidden;
 }
 
 .new-films {
+    overflow: hidden;
+    position: relative;
     &-title {
+        @include xs {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        @include sm-xs {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+        @include md-sm {
+            font-size: 3rem;
+            margin-top: 9px;
+        }
         margin-top: -7px;
         margin-bottom: 45px;
         font-size: 3rem;
@@ -20,17 +47,30 @@
             content: "";
             position: absolute;
             height: 3px;
-            width: 488px;
+            width: 100%;
             border-bottom: solid $color-accent 3px;
-            //overflow: hidden;
             margin: 40px 0 0 15px;
             opacity: 0.5;
+            // @include xs {
+            //     margin: 2px 0 0 15px;
+            // }
+            @include sm {
+                margin: 26px 0 0 15px;
+            }
         }
     }
     &-item {
         padding-left: $gap / 2;
         padding-right: $gap / 2;
         margin-bottom: $gap;
+        &__image {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+        &__list {
+            margin-bottom: 0;
+        }
         &__thumbnail {
             margin-bottom: 0;
         }
@@ -42,6 +82,9 @@
             font-weight: bold;
             margin: auto;
             text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
     &-row {
@@ -50,54 +93,32 @@
     }
 }
 
-.top-films {
-    &-title {
-        margin-top: 60px;
-        margin-bottom: 45px;
-        padding-left: 45px;
-        font-size: 2.5rem;
-        font-family: $font-header;
-        width: 100%;
-        &::before {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 30px;
-            border-bottom: solid $color-accent 3px;
-            //overflow: hidden;
-            margin: 10px 0 0px -45px;
-            opacity: 0.5;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 508px;
-            border-bottom: solid $color-accent 3px;
-            //overflow: hidden;
-            margin: 34px 0 0px 15px;
-            opacity: 0.5;
-        }
+h2 {
+    margin: 60px 0 45px 45px;
+    font-size: 2.5rem;
+    font-family: $font-header;
+}
+
+h2::after {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    margin: 0.85em 0 0 15px;
+    content: "";
+    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+    @include lg-min {
+        margin: 35px 0 0 15px;
     }
-    &-item {
-        padding-left: $gap / 2;
-        padding-right: $gap / 2;
-        margin-bottom: $gap;
-        &__thumbnail {
-            margin: 0;
-        }
-        &__thumbnail:hover {
-            background-color: $color-accent;
-        }
-        &__title {
-            font-size: 1rem;
-            font-weight: bold;
-            margin: auto;
-            text-align: center;
-        }
-    }
-    &-row {
-        margin-left: -$gap / 2;
-        margin-right: -$gap / 2;
+}
+
+h2::before {
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    margin: 0.25em 0 0 0;
+    content: "";
+    border-bottom: 3px solid rgba(240, 173, 79, 0.7);
+    @include lg-min {
+        margin: 10px 0 0 -7px;
     }
 }

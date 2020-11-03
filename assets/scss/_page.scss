@@ -1,0 +1,255 @@
+.new-films-item {
+    &__video {
+        margin-bottom: 0;
+        padding: 0;
+    }
+    &__page {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-color: #dddddd;
+        background-color: #f1f1f1;
+        min-height: 20px;
+        padding: 19px;
+        margin-bottom: 0;
+        background-color: #f1f1f1;
+        border: 1px solid #e3e3e3;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        font-size: 1.2em;
+        text-align: center;
+    }
+}
+
+.embed-responsive {
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    &-item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+.film-info__page {
+    font-size: 0.8em;
+    border-top: none;
+    margin-right: 15px;
+    // &:first-child {
+    margin-right: 15px;
+    // }
+}
+
+.film-span {
+    &:first-child {
+        margin-left: 15px;
+    }
+    @include xs {
+        display: block;
+    }
+    @include sm-xs {
+        display: inline;
+    }
+}
+
+.page-films {
+    &-title {
+        margin-top: 65px;
+        margin-bottom: 45px;
+        padding-left: 45px;
+        font-size: 2.5rem;
+        font-family: $font-header;
+        //width: 100%;
+        overflow: hidden;
+        position: relative;
+        @include xs {
+            font-size: 1.75rem;
+            margin-top: 45px;
+            margin-bottom: 30px;
+        }
+        @include sm-xs {
+            font-size: 2.5rem;
+            margin-top: 65px;
+            margin-bottom: 45px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            border-bottom: solid $color-accent 3px;
+            margin: 10px 0 0px -45px;
+            opacity: 0.5;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border-bottom: solid $color-accent 3px;
+            margin: 34px 0 0px 15px;
+            opacity: 0.5;
+            @include sm {
+                margin: 22px 0 0 15px;
+            }
+        }
+    }
+}
+
+.page-films-description {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    padding: 19px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    font-family: $font-main;
+    font-size: 1rem;
+}
+
+.page-review {
+    position: relative;
+    overflow: hidden;
+    &-title {
+        margin-top: 80px;
+        margin-left: 45px;
+        margin-bottom: 45px;
+        font-size: 2.5rem;
+        font-family: $font-header;
+        font-weight: 500;
+        @include xs {
+            font-size: 1.75rem;
+            margin-top: 65px;
+            margin-bottom: 30px;
+        }
+        @include sm-xs {
+            font-size: 2.5rem;
+            margin-top: 80px;
+            margin-bottom: 45px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            border-bottom: solid $color-accent 3px;
+            margin: 10px 0 0px -45px;
+            opacity: 0.5;
+            @include xs {
+                margin: 5px 0px 0 -45px;
+            }
+            @include sm-xs {
+                margin: 10px 0px 0 -45px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border-bottom: solid $color-accent 3px;
+            margin: 35px 0 0px 15px;
+            opacity: 0.5;
+            @include xs {
+                margin: 25px 0px 0 15px;
+            }
+            @include sm-xs {
+                margin: 34px 0px 0 15px;
+            }
+        }
+    }
+    &-item {
+        margin-bottom: 50px;
+        background-color: transparent;
+    }
+}
+
+.page-review {
+    .panel-body {
+        margin-bottom: -20px;
+        border: 1px #ddd solid;
+    }
+}
+
+.page-button {
+    float: right;
+}
+
+.page-comment {
+    position: relative;
+    overflow: hidden;
+    @include sm {
+        margin-bottom: 60px;
+    }
+    &-title {
+        margin-top: 80px;
+        margin-left: 45px;
+        margin-bottom: 45px;
+        font-size: 2.5rem;
+        font-family: $font-header;
+        font-weight: 500;
+        @include xs {
+            font-size: 1.75rem;
+            margin-top: 45px;
+            margin-bottom: 30px;
+        }
+        @include sm-xs {
+            font-size: 2.5rem;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+        @include md-sm {
+            font-size: 2.5rem;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+        @include lg-md {
+            font-size: 2.5rem;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+        @include lg-min {
+            font-size: 2.5rem;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 30px;
+            border-bottom: solid $color-accent 3px;
+            margin: 10px 0 0px -45px;
+            opacity: 0.5;
+            @include xs {
+                margin: 7px 0 0px -45px;
+            }
+            @include sm-xs {
+                margin: 10px 0 0px -45px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-bottom: solid $color-accent 3px;
+            margin: 35px 0 0px 15px;
+            opacity: 0.5;
+            @include xs {
+                margin: 25px 0 0px 15px;
+            }
+            @include sm-xs {
+                margin: 34px 0 0px 15px;
+            }
+        }
+    }
+}
+
+.form-control {
+    &.form-1 {
+        height: 46px;
+        padding: 10px 16px 10px 16px;
+    }
+}
